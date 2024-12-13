@@ -28,7 +28,7 @@ const SignUp = () => {
         console.log("Inside signup");
 
         try {
-            const response = await axios.post('http://localhost:8000/api/user/signup', { email, password, name });
+            const response = await axios.post('https://backend-nodejs-mysql-1.onrender.com/api/user/signup', { email, password, name });
             console.log("Response:", response.data);
 
             const { token } = response.data; 

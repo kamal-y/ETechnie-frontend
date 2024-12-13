@@ -28,7 +28,7 @@ const EditProductPage = () => {
 
 
         try {
-            const response = await axios.post(`http://localhost:8000/api/products`, product);
+            const response = await axios.post(`https://backend-nodejs-mysql-1.onrender.com/api/products`, product);
             toast.success('Product updated successfully!');
             router.push('/user/dashboard');
         } catch (error) {

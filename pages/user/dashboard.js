@@ -15,7 +15,7 @@ const Dashboard = () => {
         const token = localStorage.getItem('token'); // Get token from localStorage
 
         try {
-            const response = await axios.delete(`http://localhost:8000/api/products/${id}`, {
+            const response = await axios.delete(`https://backend-nodejs-mysql-1.onrender.com/api/products/${id}`, {
                 headers: {
                     Authorization: `Bearer ${token}`, 
                 },
@@ -41,7 +41,7 @@ const Dashboard = () => {
         const fetchProducts = async () => {
             const token = localStorage.getItem("token");
             try {
-                const response = await axios.get('http://localhost:8000/api/products', {
+                const response = await axios.get('https://backend-nodejs-mysql-1.onrender.com/api/products', {
                     headers: {
                         Authorization: `Bearer ${token}`, 
                     },

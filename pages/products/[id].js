@@ -18,7 +18,7 @@ const EditProductPage = () => {
         if (id) {
             const fetchProduct = async () => {
                 try {
-                    const response = await axios.get(`http://localhost:8000/api/products/${id}`, {
+                    const response = await axios.get(`https://backend-nodejs-mysql-1.onrender.com/api/products/${id}`, {
                         headers: {
                             Authorization: `Bearer ${token}`,
                         },
@@ -49,7 +49,7 @@ const EditProductPage = () => {
 
 
         try {
-            const response = await axios.put(`http://localhost:8000/api/products/${id}`, product);
+            const response = await axios.put(`https://backend-nodejs-mysql-1.onrender.com/api/products/${id}`, product);
             toast.success('Product updated successfully!');
             router.push('/user/dashboard'); // Redirect to the products list after successful update
         } catch (error) {

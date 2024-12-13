@@ -22,7 +22,7 @@ const Login = () => {
     console.log("inside this");
 
     try {
-      const response = await axios.post(`http://localhost:8000/api/user/login`, { email, password });
+      const response = await axios.post(`https://backend-nodejs-mysql-1.onrender.com/api/user/login`, { email, password });
       console.log("object--->", response.data.token);
       const { token } = response.data.token;
 
